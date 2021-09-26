@@ -45,8 +45,8 @@ int solveRecursive(int coins[], int size, int sum)
 
 int main()
 {
-	int coins[] = {1, 3, 4};
-	int sum = 10;
+	int coins[] = {1, 4, 5, 8};
+	int sum = 14;
 
 	cout << solve(coins, size(coins), sum) << endl;
 	cout << solveRecursive(coins, size(coins), sum) << endl;

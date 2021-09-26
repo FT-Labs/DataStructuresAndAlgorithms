@@ -31,7 +31,7 @@ int LIS(int arr[], int size)
 }
 
 
-//Note that this solution is slower because it doesnt use memoization.
+//Note that this solution is slower because it doesnt use memoization. There are some sites made this with memoization, just use a for loop for this one because its much more easier.
 int LISRecursive(int arr[], int i, int n, int prev)
 {
 	if (i == n)

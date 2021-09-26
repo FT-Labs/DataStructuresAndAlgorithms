@@ -5,7 +5,7 @@ using namespace std;
 
 /*
 
-   Note that this problem is really similar to knapsack problems. The difference is in knapsack problems you can only use each element once.
+   Note that this problem is really similar to knapsack problems. The difference is in most knapsack problems you can only use each element once.
    In coin change problem, you can use each coin infinitely.
 */
 
