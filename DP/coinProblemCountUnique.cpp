@@ -76,9 +76,9 @@ int solveDP1D(int c[], int m, int n)
 
 int main()
 {
-	int arr[] = {1, 2, 3};
+	int arr[] = {4, 5, 8};
 	int m = sizeof(arr)/sizeof(arr[0]);
-	int n = 4;
+	int n = 14;
 	cout << solve(arr, m, n) << endl;
 	cout << solveDP(arr, m, n) << endl;
 	cout << solveDP1D(arr, m, n) << endl;
