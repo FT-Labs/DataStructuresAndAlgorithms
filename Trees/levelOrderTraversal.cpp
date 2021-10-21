@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <queue>
 using namespace std;
 
 
@@ -63,6 +64,32 @@ int height(Node* node)
 	}
 }
 
+// Another way of solving by using a queue DS
+
+void printLevelOrderQ(Node* root)
+{
+	if (root == nullptr)
+		return;
+
+	queue<Node*> q;
+	//Enqueue root
+	q.push(root);
+
+	while (!q.empty())
+	{
+		//Print current data and pop
+		Node* curNode = q.front(); q.pop();
+		cout << curNode->data << ' ';
+
+		//Enqueue left node and right nodes if not null
+
+		if (curNode->left != nullptr)
+			q.push(curNode->left);
+		if (curNode->right != nullptr)
+			q.push(curNode->right);
+	}
+}
+
 Node* newNode(int data)
 {
 	Node* node = new Node(data);
@@ -88,8 +115,11 @@ int main()
 	cout << "Level order traversal of a binary tree:" << endl;
 
 	printLevelOrder(root);
-
 	cout << endl;
+	printLevelOrderQ(root);
+	cout << endl;
+
+	delete root;
 
 	return 0;
 }
