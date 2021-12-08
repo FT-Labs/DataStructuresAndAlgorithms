@@ -21,12 +21,21 @@ void insertionSort(int arr[], int n)
 }
 
 
+// Cool insertion sort with swapping, but a little bit slower
+void insertionSortC(int arr[], int n)
+{
+	for (int i=1; i<n; i++)
+		for (int j=i; j>0 && arr[j] < arr[j-1]; j--)
+			swap(arr[j], arr[j-1]);
+}
+
+
 int main()
 {
 	int arr[] = {1,4,3,5,6,2};
 	int n = sizeof(arr)/sizeof(arr[0]);
 
-	insertionSort(arr,n);
+	insertionSortC(arr,n);
 
 	for(int i=0;i<n;++i)
 	{
