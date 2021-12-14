@@ -24,6 +24,9 @@ bool union_set(int x, int y){
         else
             parent[i] = j;
 
+		if (rnk[i] == rnk[j])
+			rnk[j]++;
+
         return true;
     }
     return false;

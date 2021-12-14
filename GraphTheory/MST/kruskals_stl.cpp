@@ -97,7 +97,7 @@ int Graph::kruskalMST()
 
 			mstMin += it->first;
 
-			ds.merge(setU,  setV);
+			ds.merge(u,  v);
 		}
 	}
 
