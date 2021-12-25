@@ -60,7 +60,10 @@ int main()
 
 	printLL(head);
 
-	delete head, second, third, fourth;
+	delete head;
+	delete second;
+	delete third;
+	delete fourth;
 
 	return 0;
 }
