@@ -63,7 +63,7 @@ void deleteNodeForNormies(Node** head, int data)
 		return;
 	}
 
-	while (walk->data != data && walk != nullptr)
+	while (walk && walk->data != data)
 	{
 		prev = walk;
 		walk = walk->next;

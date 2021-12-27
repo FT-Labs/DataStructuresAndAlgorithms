@@ -26,7 +26,9 @@ int main()
 
 	printLL(head);
 
-	delete head, second, third;
+	delete head;
+	delete second;
+	delete third;
 
 	return 0;
 }
