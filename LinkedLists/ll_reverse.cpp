@@ -19,6 +19,19 @@ void reverseLL(Node** head)
 	*head = prev;
 }
 
+Node* reverseLLRecursive(Node* head)
+{
+	if (head == nullptr || head->next == nullptr)
+		return head;
+
+	Node* rest = reverseLLRecursive(head->next);
+	cout << head->data << "HERE" << endl;
+	head->next->next = head;
+	head->next = nullptr;
+
+	return rest;
+}
+
 
 int main()
 {
@@ -37,12 +50,12 @@ int main()
 
 	printLL(head);
 
+	head = reverseLLRecursive(head);
+
+	printLL(head);
 
 
-	delete head;
-	delete second;
-	delete third;
-	delete fourth;
+
 
 	return 0;
 }
