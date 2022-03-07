@@ -32,4 +32,3 @@ int main()
 	sieveOfErastosthenes(n);
 	return 0;
 }
-
