@@ -6,16 +6,16 @@ int partition(int arr[], int low, int high)
 {
 	int pivot = arr[high];
 
-	int j, i = low - 1;
+	int j, i = low;
 
 	for (j = low; j < high; j++) {
-		if (arr[j] < pivot)
+		if (arr[j] > pivot)
 		{
-			i++;
 			swap(arr[i], arr[j]);
+			i++;
 		}
 	}
-	swap(arr[++i], arr[high]);
+	swap(arr[i], arr[high]);
 	return i;
 }
 
@@ -32,7 +32,7 @@ void quickSort(int arr[], int low, int high)
 
 int main()
 {
-	int arr[] = {1, 3, 2, 8, 11, 14, 18};
+	int arr[] = {1, 3, 2, 8, 11, 14, 18, 5};
 	int n = sizeof(arr) / sizeof(arr[0]);
 
 	for (auto it : arr) cout << it << ' ';
