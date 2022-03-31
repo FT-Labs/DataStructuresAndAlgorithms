@@ -6,13 +6,15 @@ x = input()
 
 cur = int(x)
 flag = True
+mn = 1e20
 
 for perm in permutations(x):
     tmp = int("".join(perm))
     if tmp > cur:
-        print(tmp)
+        mn = min(mn, tmp)
         flag = False
-        break
 
 if flag:
     print(0)
+else:
+    print(mn)
